@@ -1,6 +1,6 @@
 # 本仓库为出ACM题的简易模版
 ## 新建题目
-- 需要增加题目时, 可以复制problems/squares并重命名为<your_prob>
+- 需要增加题目时, 可以复制problems中的题目并重命名为<your_prob>
 ## 数据生成
 - data-gen文件夹下所有文件必须保留(when all data is static, data_gen.py can be removed), 其中validator为数据格式验证, data_gen为数据生成, gen-config.csv为每组数据的参数, 使用参数的方法见模板题中的data_gen.py/validator.py, 其中第一列data_id为数据组号, 可以增加列数, 但每个数据必须为整数
 - gen-config中第二列is_static表示此数据是否为静态的, 若为静态的, 需要从data-gen/input文件夹下读取相应数据. 否则动态生成
