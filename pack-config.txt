@@ -4,8 +4,8 @@
     "std_dir_name":"程序",
     "data_gen_dir_name":"程序",
     "pack_probs_list":{
-        #"add2":"a + b",
-        "add11":"b + a",
-        "add10":"aa + bb",
+        #"add2":"a_b",
+        "add11":"b_a",
+        "add10":"aa_bb",
     }
 }
