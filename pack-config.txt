@@ -1,0 +1,9 @@
+{
+    "output_dir_name":"输出",
+    "input_dir_name":"输入",
+    "std_dir_name":"程序",
+    "data_gen_dir_name":"程序",
+    "pack_probs_list":{
+        "add2":"a + b",
+    }
+}
