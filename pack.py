@@ -2,7 +2,7 @@ import utils
 import os
 import sys
 
-need_repack_list = ["pack.py", "pack-config"]
+need_repack_list = ["pack.py", "pack-config.txt"]
 
 if __name__ == "__main__":
     need_pack = False
