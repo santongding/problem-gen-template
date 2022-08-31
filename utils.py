@@ -8,16 +8,18 @@ def err(s):
     exit(1)
 
 
+def worker(cmd):
+    execute(cmd)
+
+
 def execute(cmd, timeout=None):
     os.system("echo \"_________________{} {} _________________________\"".format("execute", cmd))
     if timeout is None:
         if os.system(cmd) != 0:
             err("fail to execute \"{}\"".format(cmd))
     else:
-        def worker():
-            execute(cmd)
 
-        process = multiprocessing.Process(target=worker, args=())
+        process = multiprocessing.Process(target=worker, args=(cmd,))
         process.start()
 
         process.join(timeout)
