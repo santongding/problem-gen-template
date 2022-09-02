@@ -34,6 +34,8 @@ if __name__ == "__main__":
             in_dir = "./problems/{}".format(k)
             utils.execute("cp -r {0}/docs {1} || mkdir {1}".format(in_dir, out_dir))
             utils.execute("cp -r {}/std {}/{}".format(in_dir, out_dir, config.std_dir_name))
+            utils.execute("rm -rf {}/data-gen/__pycache__".format(in_dir))
+            utils.execute("rm -rf {}/data-gen/input".format(in_dir))
             utils.execute("cp -r {}/data-gen {}/{}".format(in_dir, out_dir, config.data_gen_dir_name))
             os.mkdir(out_dir + "/" + config.input_dir_name)
             os.mkdir(out_dir + "/" + config.output_dir_name)

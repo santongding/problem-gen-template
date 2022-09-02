@@ -5,7 +5,7 @@ import multiprocessing
 
 def err(s):
     os.system("echo {}".format(s))
-    exit(1)
+    raise Exception("fail to execute")
 
 
 def worker(cmd):
@@ -28,7 +28,7 @@ def execute(cmd, timeout=None):
             err("cmd running over {} secs".format(timeout))
 
         if process.exitcode != 0:
-            exit(1)
+            raise Exception("fail to execute")
 
 
 def getints(num):

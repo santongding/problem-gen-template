@@ -34,7 +34,12 @@ def test(cpps, dataPath, outputDir):
             execute("./{} >./temp/temp.out <{}".format(c, dataPath), float(cname.split('_')[-1]))
         else:
             execute("./{} >./temp/temp.out <{}".format(c, dataPath), 1.0)
-        execute("diff ./temp/temp.out {}".format(outputPath))
+        try:
+            execute("diff ./temp/temp.out {}".format(outputPath))
+        except Exception as e:
+            execute("cat {}".format(dataPath))
+            exit(1)
+            pass
 
 
 if __name__ == "__main__":
